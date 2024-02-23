@@ -20,7 +20,9 @@ struct ContentView: View {
     
     func fetchImageForTodo() {
         // Fetch image from Unsplash API based on todo text
-        guard let url = URL(string: "https://api.unsplash.com/photos/random?query=\(todoText)&client_id=ri_RkWxwnhPidepEo1xWm_ZcoPA5YW6E_jE9OcNUMeo") else {
+        var apiKey = ""
+        // TODO: Add API Key
+        guard let url = URL(string: "https://api.unsplash.com/photos/random?query=\(todoText)&client_id=\(apiKey)") else {
             return
         }
         
